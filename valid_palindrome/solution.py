@@ -13,7 +13,7 @@ def isPalindrome(s):
     while l < r:
         while l < r and not alphaNum(s[l]):
             l += 1
-        while r < l and not alphaNum(s[r]):
+        while r > l and not alphaNum(s[r]):
             r -= 1
         if s[l].lower() != s[r].lower():
             return False
@@ -21,5 +21,5 @@ def isPalindrome(s):
     
     return True
 
-print(isPalindrome("abab"))
+print(isPalindrome("A man, a plan, a canal: Panama"))
     
